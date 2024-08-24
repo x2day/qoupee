@@ -22,3 +22,9 @@ Using ['Retrieval-Augmented Generation - RAG'](https://aws.amazon.com/what-is/re
  <br>
     <em>Data Preparation</em>
 </p>
+
+<p align="center">
+  <img src="[product-recommendation.drawio.png](https://github.com/x2day/qoupee/blob/3b6b8f63accbde3ee59b6a41a1a82d0f392aa23e/product-recommendation.drawio.png)" width="800">
+  <br>
+    <em>product recommendation algo</em>
+</p>
