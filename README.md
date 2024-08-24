@@ -1,4 +1,4 @@
-_Imagine looking for a cream for dry skin while avoiding oranges. Normally, you'd ask a consultant for help. Meet our AI assistant - Coupee, that offers personalized recommendations and can chat with you in your preferred language, making your search easy and tailored to your needs._
+_Imagine looking for a cream for dry skin while avoiding oranges. Normally, you'd ask a consultant for help. Meet our AI Assistant - Coupee, that offers personalized recommendations and can chat with you in your preferred language, making your search easy and tailored to your needs._
 
 ## Data collection
 We’ve set up a database with products in three categories: Facial Cleansing Washes, Single Board Computers, and Nightstands, all available on qoupee.x2day.org (our Mock website). Each product entry includes the name, price, and images, with detailed URLs linked for easy browsing.
@@ -12,3 +12,6 @@ Using our collected data, we’ve built a WordPress website to test our assistan
   <br>
     <em>Wordpress product database sample</em>
 </p>
+
+## Data Processing 
+Using ['Retrieval-Augmented Generation - RAG'](https://aws.amazon.com/what-is/retrieval-augmented-generation/?nc1=h_ls) we created our AI Assistant. 
