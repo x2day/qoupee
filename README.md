@@ -3,5 +3,12 @@ _Imagine looking for a cream for dry skin while avoiding oranges. Normally, you'
 ## Data collection
 We’ve set up a database with products in three categories: Facial Cleansing Washes, Single Board Computers, and Nightstands, all available on qoupee.x2day.org(our Mock website). Each product entry includes the name, price, and images, with detailed URLs linked for easy browsing.
 
+
 ## Testing environment 
-Using our collected data, we’ve built a WordPress website to test our assistant. We exported a .csv file of product links from our site and imported it into MandoDB for seamless integration and testing.
+Using our collected data, we’ve built a WordPress website to test our assistant. We exported a .csv file of product links from our website and imported it into MandoDB for seamless integration and testing.
+
+![image](https://github.com/user-attachments/assets/88f05d77-81e7-439c-a86f-9ddac8442edf)
+
+
+
+
