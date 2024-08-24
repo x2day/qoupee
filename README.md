@@ -3,8 +3,8 @@ You expect this is coupang? This is qoupee. We have added AI chat assistant to o
 When you came to shop we can ask assistant. Say hello to qoupee - our AI assistant.
 
 There was generated three category of products:
-Facial Cleansing Washes
-Single Board Computers
+Facial Cleansing Washes,
+Single Board Computers,
 Nightstands
 
 You can find in this category using AI assistant.
