@@ -1,8 +1,12 @@
 const chatInput = document.querySelector(".chat-input textarea");
 const sendChatBtn = document.querySelector(".chat-input span");
 const chatbox = document.querySelector(".chatbox");
+const chabotToggler = document.querySelector(".chatbot-toggler");
+const chabotCloseBtn = document.querySelector(".close-btn");
+
 
 let userMessage;
+const inputInitHeight = chatInput.scrollHeight;
 
 const createChatLi = (message, className) => {
     // Create chat <li> element with the passed message and className
@@ -60,7 +64,7 @@ const generateResponse = (userMessage) => {
         if (thinkingMessage) thinkingMessage.remove();
 
         chatbox.appendChild(createChatLi("Failed to get a response.", "incoming"));
-    });
+    }).finally(() => chatbox.scrollTo(0, chatbox.scrollHeight));
 }
 
 const handleChat = () => {
@@ -72,15 +76,20 @@ const handleChat = () => {
 
     // Append user's message to chatbox
     chatbox.appendChild(createChatLi(userMessage, "outgoing"));
+    chatbox.scrollTo(0, chatbox.scrollHeight);
 
     setTimeout(() => {
         // Display "Thinking..." message while waiting for the response
          chatbox.appendChild(createChatLi("Thinking...", "incoming"));
-        generateResponse(userMessage);
+         chatbox.scrollTo(0, chatbox.scrollHeight);
+         generateResponse(userMessage);
     }, 600);
 }
 
+
 sendChatBtn.addEventListener("click", handleChat);
+chabotToggler.addEventListener("click", () => document.body.classList.toggle("show-chatbot"));
+chabotCloseBtn.addEventListener("click", () => document.body.classList.remove("show-chatbot"));
 chatInput.addEventListener("keydown", (e) => {
     if(e.key === "Enter") handleChat();
 });
