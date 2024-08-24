@@ -20,5 +20,5 @@ Using ['Retrieval-Augmented Generation - RAG'](https://aws.amazon.com/what-is/re
 <p align="center">
   <img src="https://github.com/user-attachments/assets/d1ab21b6-9218-4bce-a251-6c21e65cf327"width="800">
  <br>
-    <em>Data Preperation</em>
+    <em>Data Preparation</em>
 </p>
