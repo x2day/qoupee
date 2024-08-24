@@ -7,8 +7,8 @@ We’ve set up a database with products in three categories: Facial Cleansing Wa
 ## Testing environment 
 Using our collected data, we’ve built a WordPress website to test our assistant. We exported a .csv file of product links from our website and imported it into MandoDB for seamless integration and testing.
 
-![image](https://github.com/user-attachments/assets/88f05d77-81e7-439c-a86f-9ddac8442edf)
-
-
-
-
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/88f05d77-81e7-439c-a86f-9ddac8442edf" width="800">
+  <br>
+    <em>Wordpress product database sample</em>
+</p>
