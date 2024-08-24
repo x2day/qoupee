@@ -1,0 +1,153 @@
+{
+  "name": "Seoul hackathon",
+  "nodes": [
+    {
+      "parameters": {
+        "authentication": "headerAuth",
+        "requestMethod": "POST",
+        "url": "https://api.openai.com/v1/embeddings",
+        "jsonParameters": true,
+        "options": {},
+        "bodyParametersJson": "={\n  \"model\":\"text-embedding-3-large\",\n\"input\": \"{{ $json.body.text }}\"\n}\n "
+      },
+      "name": "Convert Text to Vector",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 1,
+      "position": [
+        7940,
+        420
+      ],
+      "id": "a9b22d84-83c4-44df-8165-65c8e4340b29",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "7U9moBrTb3LytaZN",
+          "name": "Vladimir OpenAI"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "functionCode": "return items.map(item => {\n    const { URL, Description, Title, Images, ...rest } = item.json;\n  const imageArray = Images.split(','); // Split the Images string by comma\n    return { json: { url: URL, description: Description, title: Title, image: imageArray[0] } };\n});"
+      },
+      "name": "Format Response",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        8300,
+        420
+      ],
+      "id": "038d01f8-19a1-4070-812b-b0782d750490"
+    },
+    {
+      "parameters": {
+        "operation": "aggregate",
+        "collection": "product_v2",
+        "query": "=[{\n    \"$vectorSearch\": {\n\"index\": \"vector_index\",\n\"path\": \"embedding\",\n\"numCandidates\": 5,\n\"limit\": 5,\n\"queryVector\": [{{$json.data[0].embedding}}]\n      }\n    }\n]"
+      },
+      "name": "MongoDB Vector Search",
+      "type": "n8n-nodes-base.mongoDb",
+      "typeVersion": 1,
+      "position": [
+        8100,
+        420
+      ],
+      "id": "a82f75b0-41fb-402c-8bb4-d046ceef5aa1",
+      "credentials": {
+        "mongoDb": {
+          "id": "HSg2djoh9ziM69mk",
+          "name": "search_product"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "respondWith": "allIncomingItems",
+        "options": {}
+      },
+      "id": "3c375641-50a5-4cdd-b431-73a5a6fe8cb6",
+      "name": "Respond to Webhook",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1.1,
+      "position": [
+        8500,
+        420
+      ]
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "text-to-vector",
+        "responseMode": "responseNode",
+        "options": {
+          "rawBody": false
+        }
+      },
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        7780,
+        420
+      ],
+      "id": "44e95081-b816-43dc-88ee-8f4441dbae8e"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Convert Text to Vector": {
+      "main": [
+        [
+          {
+            "node": "MongoDB Vector Search",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "MongoDB Vector Search": {
+      "main": [
+        [
+          {
+            "node": "Format Response",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Format Response": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Convert Text to Vector",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "0b7cdfc3-ab03-40f4-b50b-453d8afa69b4",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "15932019afce3a2b24ae62d4cf674558f5cfc6ee2fd8a14225366ceb2ca9e88e"
+  },
+  "id": "e8okWm6Hm4nloUOe",
+  "tags": []
+}
