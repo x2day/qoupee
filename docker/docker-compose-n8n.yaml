@@ -1,0 +1,12 @@
+services:
+  n8n:
+    image: docker.n8n.io/n8nio/n8n
+    restart: always
+    ports:
+      - 5678:443
+    environment:
+      N8N_HOST: mydomain.com  # Add your domain here
+      N8N_PORT: 443
+      N8N_PROTOCOL: https
+    volumes:
+      - ~/.n8n:/home/node/.n8n
