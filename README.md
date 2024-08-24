@@ -1,9 +1,6 @@
-You expect this is coupang? This is qoupee. We have added AI chat assistant to our lovely service. It can works with any language. Do you want "I need computer to game in LOL", "I have acne. Find cream anti-acne", "nightstand with minimalist drawer handles"? Ask in any language!
+Imagine looking for a cream for dry skin while avoiding oranges. Normally, you'd ask a consultant for help. Meet our AI assistant - Coupee, that offers personalized recommendations and can chat with you in your preferred language, making your search easy and tailored to your needs.
 
-When you came to shop we can ask assistant. Say hello to qoupee - our AI assistant.
-
-## Historical notes
-There was generated three category of products:
-Facial Cleansing Washes, Single Board Computers, Nightstands. Each product contains name, price, images. After all products was uploaded to qoupee.x2day.org where each product contains URL, name, price, images.
+## Data collection
+We’ve set up a database with products in three categories—Facial Cleansing Washes, Single Board Computers, and Nightstands—on qoupee.x2day.org. Each product entry includes its name, price, and images, all linked to detailed URLs for easy browsing.
 
 You can find any product from our database using the AI assistant.
