@@ -4,7 +4,6 @@ const chatbox = document.querySelector(".chatbox");
 const chabotToggler = document.querySelector(".chatbot-toggler");
 const chabotCloseBtn = document.querySelector(".close-btn");
 
-
 let userMessage;
 const inputInitHeight = chatInput.scrollHeight;
 
