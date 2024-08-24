@@ -15,3 +15,10 @@ Using our collected data, we’ve built a WordPress website to test our assistan
 
 ## Data Processing 
 Using ['Retrieval-Augmented Generation - RAG'](https://aws.amazon.com/what-is/retrieval-augmented-generation/?nc1=h_ls) we created our AI Assistant. 
+
+* Date Preperation
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/d1ab21b6-9218-4bce-a251-6c21e65cf327"width="800">
+ <br>
+    <em>Wordpress product database sample</em>
+</p>
