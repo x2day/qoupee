@@ -1,4 +1,4 @@
-# *QOUPEE* - Retrieval Augmented Product Recommendation Assistant
+# *"QOUPEE"* - Retrieval Augmented Product Recommendation Assistant
 Our Retrieval Augmented Product Recommendation Assistant enhances online shopping by integrating `semantic search` with Large Language Models (LLMs) to deliver `precise`, `real-time` product recommendations. It reduces the time customers spend searching, even with `complex queries` like “I need an acne face wash for oily skin,” and supports `multilingual search`. The system `dynamically adapts to database updates`, ensuring up-to-date recommendations. Additionally, it can `integrate with existing keyword, review, and category filters`, further refining accuracy. The standout feature is its ability to refine queries and provide context-aware suggestions, offering a highly personalized shopping experience. 
 
 Demo video https://youtu.be/Lo2gs1e_7LM
@@ -59,3 +59,8 @@ The following outlines the step-by-step process of product search and recommenda
 4. This query vector is used to find the `k most semantically similar` products from the database.
 5. The original user prompt is appended with the extracted products and passed to the LLM to generate the final output.
 6. The LLM output is returned to the user as the response to their query.
+
+## Qoupee Response in Korean
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/b25a1c0a-a62f-430c-ad4d-d19ca2ba67e3">
+</p>
