@@ -1,17 +1,24 @@
 # *"QOUPEE"* - Retrieval Augmented Product Recommendation Assistant
 Our Retrieval Augmented Product Recommendation Assistant enhances online shopping by integrating `semantic search` with Large Language Models (LLMs) to deliver `precise`, `real-time` product recommendations. It reduces the time customers spend searching, even with `complex queries` like “I need an acne face wash for oily skin,” and supports `multilingual search`. The system `dynamically adapts to database updates`, ensuring up-to-date recommendations. Additionally, it can `integrate with existing keyword, review, and category filters`, further refining accuracy. The standout feature is its ability to refine queries and provide context-aware suggestions, offering a highly personalized shopping experience. 
 
-
+### Text demo
 [![QOUPEE DEMO](https://img.youtube.com/vi/Lo2gs1e_7LM/0.jpg)](https://www.youtube.com/watch?v=Lo2gs1e_7LM)
 
-Demo video https://youtu.be/Lo2gs1e_7LM
-
-
+### Voice input demo
+[![QOUPEE DEMO](https://img.youtube.com/vi/tb7smbrFK8E/0.jpg)](https://www.youtube.com/watch?v=tb7smbrFK8E)
 <p align="center">
   <img src="assets/chat-with-voice-example.png" width="300">
   <br>
-    <em>Chat with voice</em>
+    <em>Chat with voice preview</em>
 </p>
+
+
+## Contributors
+
+- [@Vladimir-125](https://github.com/Vladimir-125)
+- [@anista13](https://github.com/anista13)
+- [@AndreiCherniaev](https://github.com/AndreiCherniaev)
+- [@codecikoi](https://github.com/codecikoi)
 
 
 ## Tech Stack
